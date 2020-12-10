@@ -24,7 +24,7 @@ static const uint32_t UART1_BASE_ADDR = 0x90000000;
 static const uint32_t UART2_BASE_ADDR = 0x91000000;
 
 // This is how your processor accesses the 8-bit UART registers mapped into its memory space.
-#define REG8(addr) *((volatile unsigned char *)(addr))
+#define REG8(addr) *((volatile unsigned char *)((uintptr_t)addr))
 
 // -------------------------------------------------------------
 
